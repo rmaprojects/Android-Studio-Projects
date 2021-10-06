@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:hint="Nilai X"
+        android:id="@+id/edtNilaiX"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pertambahan / +"
+        android:textColor="#FFF"
+        android:fontFamily="serif-monospace"
+        android:backgroundTint="#FF9800"
+        android:id="@+id/btnPertambahan"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pengurangan / -"
+        android:fontFamily="serif-monospace"
+        android:textColor="#FFF"
+        android:id="@+id/btnPengurangan"
+        android:backgroundTint="#2196F3"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perkalian / x"
+        android:fontFamily="serif-monospace"
+        android:textColor="#FFF"
+        android:id="@+id/btnPerkalian"
+        android:backgroundTint="#673AB7"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pembagian / ÷"
+        android:textColor="#FFF"
+        android:fontFamily="serif-monospace"
+        android:backgroundTint="#009688"
+        android:id="@+id/btnPembagian"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/edtNilaiY"
+        android:hint="Nilai Y"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHasil"/>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.DetailBeritaActivity">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siapa yang Pertama Kali Dapat Vaksin COVID-19? - SINDOnews.com"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="5pt"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sumber : Sindonews.com"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="5pt"
+                android:textColor="#453C3C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penulis : Intan Rakhmayanti Dewi"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:textSize="5pt"
+                android:textColor="#BA9D9D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sejumlah vaksin Covid-19 kini sedang dalam proses akhir pembuatan. Di sisi lain, masyarakat tentu bertanya siapa yang pertama kali akan mendapat vaksin tersebut"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="5pt"
+                android:textColor="#BA9D9D"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEW YORK - Sejumlah vaksin Covid-19kini sedang dalam proses akhir pembuatan. Di sisi lain, masyarakat tentu bertanya siapa yang pertama kali akan mendapat vaksin tersebut"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="5pt"
+                android:textColor="#453C3C"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dipublikasikan pada : 2020-12-07 02:01"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
