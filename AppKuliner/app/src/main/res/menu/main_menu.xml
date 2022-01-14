@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/setDarkMode"
+        android:icon="@drawable/ic_baseline_contrast_24"
+        app:showAsAction="always"
+        android:title="Set Dark Mode">
+    </item>
+    <item
+        android:id="@+id/aboutMe"
+        android:icon="@drawable/ic_round_account_circle_24"
+        app:showAsAction="always"
+        android:title="About Me">
+    </item>
+</menu>

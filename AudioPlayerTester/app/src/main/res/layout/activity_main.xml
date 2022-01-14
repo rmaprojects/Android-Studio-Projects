@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tombolPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Play Murrottal (ArgPlayer)"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/argPlayerSmallView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/jcplayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Murrotal JC"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/tombolPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/keSnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snow"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tombolPlay" />
+
+    <com.arges.sepan.argmusicplayer.PlayerViews.ArgPlayerSmallView
+        android:id="@+id/argPlayerSmallView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.arges.sepan.argmusicplayer.PlayerViews.ArgPlayerSmallView>
+
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:id="@+id/jcPlayer"
+        android:visibility="gone"
+        app:next_icon_color="@color/material_on_background_emphasis_high_type"
+        app:pause_icon_color="@color/material_on_background_emphasis_high_type"
+        app:play_icon_color="@color/material_on_background_emphasis_high_type"
+        app:previous_icon_color="@color/material_on_background_emphasis_high_type"
+        app:progress_color="@color/material_on_background_emphasis_high_type"
+        app:random_icon_color="@color/material_on_background_emphasis_high_type"
+        app:repeat_icon_color="@color/material_on_background_emphasis_high_type"
+        app:repeat_one_icon_color="@color/material_on_background_emphasis_high_type"
+        app:seek_bar_color="@color/material_on_background_emphasis_high_type"
+        app:text_audio_current_duration_color="@color/material_on_background_emphasis_high_type"
+        app:text_audio_duration_color="@color/material_on_background_emphasis_high_type"
+        app:text_audio_title_color="@color/material_on_background_emphasis_high_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
