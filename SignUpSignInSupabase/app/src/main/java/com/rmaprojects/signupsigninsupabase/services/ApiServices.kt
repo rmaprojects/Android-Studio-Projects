@@ -18,14 +18,14 @@ interface ApiServices {
     @POST("signup")
     suspend fun signUp(
         @Body signUpForm:SignUpPost
-    ) : Response<SignUpReturn>
+    ) : SignUpReturn
 
     @Headers("apikey:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJzZXJ2aWNlX3JvbGUiLCJpYXQiOjE2NDI3MjUwNTQsImV4cCI6MTk1ODMwMTA1NH0.Iwg-CrfqySKG0qgqtLA7i76Uxk8qRDJuI0oN6Qim6Ok")
     @POST("token")
-    suspend fun singIn(
+    suspend fun signIn(
         @Query("grant_type") grant:String,
         @Body signInForm:SignInPost
-    ) : Response<SignInReturn>
+    ) : SignInReturn
 
     companion object {
         private const val BASE_URL = "https://lxghnrjozjmfxejvjrqy.supabase.co/auth/v1/"

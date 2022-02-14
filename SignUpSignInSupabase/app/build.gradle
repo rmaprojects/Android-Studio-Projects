@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -44,4 +47,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.3'
+    implementation 'com.google.code.gson:gson:2.8.8'
 }
