@@ -3,6 +3,7 @@ package com.rmaproject.sholattrackeranak.ui.home.setor_sholat
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.rmaproject.sholattrackeranak.MainActivity
 import com.rmaproject.sholattrackeranak.R
@@ -19,7 +20,12 @@ class SetorSholatFragment : Fragment(R.layout.fragment_setor_sholat) {
 
         val tinyDb = TinyDB(requireContext())
         val listNamaAnak = tinyDb.getObject(MainActivity.DAFTARANAKKEY, NamaAnakModel::class.java)
+        val adapter = NamaAnakAdapter(listNamaAnak)
 
-        binding.recyclerView.adapter = NamaAnakAdapter(listNamaAnak)
+        binding.recyclerView.adapter = adapter
+
+        adapter.listener = {
+            findNavController().navigate(R.id.action_nav_setor_sholat_to_kirimSholatDialogFragment)
+        }
     }
 }

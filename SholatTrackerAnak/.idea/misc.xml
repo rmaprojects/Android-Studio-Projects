@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/fragment_jadwal_sholat.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_kirim_sholat.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_setor_sholat.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_setor_sholat_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1721014492753623" />

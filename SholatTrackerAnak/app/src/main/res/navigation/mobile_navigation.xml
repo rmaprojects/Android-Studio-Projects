@@ -9,7 +9,11 @@
         android:id="@+id/nav_setor_sholat"
         android:name="com.rmaproject.sholattrackeranak.ui.home.setor_sholat.SetorSholatFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_setor_sholat" />
+        tools:layout="@layout/fragment_setor_sholat" >
+        <action
+            android:id="@+id/action_nav_setor_sholat_to_kirimSholatDialogFragment"
+            app:destination="@id/kirimSholatDialogFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_jadwal_sholat"
@@ -22,4 +26,9 @@
         android:name="com.rmaproject.sholattrackeranak.ui.home.history.HistoryFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_history" />
+    <dialog
+        android:id="@+id/kirimSholatDialogFragment"
+        tools:layout="@layout/fragment_kirim_sholat"
+        android:name="com.rmaproject.sholattrackeranak.ui.dialog.KirimSholatDialogFragment"
+        android:label="KirimSholatDialogFragment" />
 </navigation>

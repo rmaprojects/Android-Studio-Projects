@@ -77,8 +77,8 @@ class MainActivity : AppCompatActivity() {
     private fun setAlarm() {
 
         calendar = Calendar.getInstance()
-        calendar[Calendar.HOUR_OF_DAY] = 13
-        calendar[Calendar.MINUTE] = 51
+        calendar[Calendar.HOUR_OF_DAY] = 12
+        calendar[Calendar.MINUTE] = 10
         calendar[Calendar.SECOND] = 0
         calendar[Calendar.MILLISECOND] = 0
 

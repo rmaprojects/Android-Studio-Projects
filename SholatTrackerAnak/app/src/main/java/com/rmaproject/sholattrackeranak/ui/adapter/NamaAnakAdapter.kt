@@ -14,6 +14,8 @@ import com.rmaproject.sholattrackeranak.ui.adapter.NamaAnakAdapter.NamaAnakAdapt
 
 class NamaAnakAdapter(val namaAnak: NamaAnakModel) : RecyclerView.Adapter<NamaAnakAdapterViewHolder>() {
 
+    var listener: (() -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NamaAnakAdapterViewHolder {
         return NamaAnakAdapterViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_nama_anak, parent, false))
     }
@@ -21,6 +23,9 @@ class NamaAnakAdapter(val namaAnak: NamaAnakModel) : RecyclerView.Adapter<NamaAn
     override fun onBindViewHolder(holder: NamaAnakAdapterViewHolder, position: Int) {
         val listNamaAnak = namaAnak.listNamaAnakModel[position]
         holder.holder(listNamaAnak)
+        holder.binding.cardViewNamaAnak.setOnClickListener {
+            listener?.invoke()
+        }
     }
 
     override fun getItemCount(): Int {

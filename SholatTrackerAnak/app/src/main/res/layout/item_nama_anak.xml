@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewNamaAnak"
         android:layout_width="match_parent"
         android:clickable="true"
         android:background="?selectableItemBackground"
