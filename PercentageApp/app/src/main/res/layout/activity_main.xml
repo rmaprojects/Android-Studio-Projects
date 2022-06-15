@@ -12,29 +12,31 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <View
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:background="#FF0000"
-            android:layout_weight="50"
-            android:layout_height="match_parent"/>
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"/>
         <View
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:background="#00FF00"
-            android:layout_weight="30"
-            android:layout_height="match_parent"/>
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"/>
         <View
-            android:layout_weight="10"
-            android:layout_width="match_parent"
+            android:layout_weight="0.0"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
             android:background="#FFFF00"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
         <View
-            android:layout_weight="10"
-            android:layout_width="match_parent"
+            android:layout_weight="0.6"
+            android:layout_width="wrap_content"
             android:background="#0000FF"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

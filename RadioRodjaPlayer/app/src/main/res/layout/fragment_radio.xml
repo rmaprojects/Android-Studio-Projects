@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/rodja_img"
+        android:layout_width="265dp"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="265dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:text="Rodja 756 AM"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/qualityChooser"
+        android:layout_width="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:layout_width="match_parent"
+            app:simpleItems="@array/choose_quality"
+            android:inputType="none"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_baseline_play_circle_filled_24"
+                android:layout_height="wrap_content"
+                app:tint="?colorPrimary"
+                android:background="?selectableItemBackground"
+                />
+            <ImageView
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_baseline_stop_circle_24"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

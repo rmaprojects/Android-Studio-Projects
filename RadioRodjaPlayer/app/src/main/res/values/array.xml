@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="choose_quality">
+        <item>Kualitas Tinggi</item>
+        <item>Kualitan Rendah</item>
+    </array>
+</resources>
