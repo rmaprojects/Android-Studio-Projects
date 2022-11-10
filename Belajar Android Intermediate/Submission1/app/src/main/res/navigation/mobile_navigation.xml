@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_list_story">
+
+    <fragment
+        android:id="@+id/nav_list_story"
+        tools:layout="@layout/fragment_list_story"
+        android:name="com.rmaprojects.submission1.pages.storylist.ListStoryFragment"
+        android:label="List History" >
+        <action
+            android:id="@+id/action_nav_list_story_to_loginFragment"
+            app:destination="@id/nav_login" />
+        <action
+            android:id="@+id/action_nav_list_story_to_uploadStoryFragment"
+            app:destination="@id/nav_story_upload" />
+        <action
+            android:id="@+id/action_nav_list_story_to_detailStoryFragment"
+            app:destination="@id/nav_detail_story" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.rmaprojects.submission1.pages.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_register"
+            app:destination="@id/nav_register" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_list_story"
+            app:destination="@id/nav_list_story" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.rmaprojects.submission1.pages.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_nav_register_to_nav_login"
+            app:destination="@id/nav_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_story_upload"
+        android:name="com.rmaprojects.submission1.pages.upload.UploadStoryFragment"
+        android:label="Upload Story"
+        tools:layout="@layout/fragment_upload_story" />
+    <fragment
+        android:id="@+id/nav_detail_story"
+        tools:layout="@layout/fragment_detail_story"
+        android:name="com.rmaprojects.submission1.pages.storydetail.DetailStoryFragment"
+        android:label="Detail Story" />
+</navigation>

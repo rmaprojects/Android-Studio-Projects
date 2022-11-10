@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Submission1</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_password_login">Password</string>
+    <string name="alert_login_fail">Terjadi kesalahan, gagal login!</string>
+    <string name="alert_story_failed">Terjadi kesalahan, list story gagal ditampilkan!</string>
+    <string name="alert_register_fail">Terjadi kesalahan, gagal mendaftarkan user!</string>
+    <string name="alert_register_success">Registrasi berhasil! Silahkan login untuk melanjutkan</string>
+    <string name="err_field_empty">Please fill this field</string>
+</resources>

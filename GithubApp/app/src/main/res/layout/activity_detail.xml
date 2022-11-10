@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="@style/Widget.Material3.CollapsingToolbar.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:colorBackground"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_weight="1.8"
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_avatar"
+                            android:layout_width="match_parent"
+                            tools:src="@tools:sample/avatars"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:paddingHorizontal="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_full_name"
+                            android:layout_width="match_parent"
+                            android:text="Loading..."
+                            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_username"
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:text="Loading..."
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_twitter"
+                        android:layout_width="match_parent"
+                        android:text="Loading..."
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:drawablePadding="8dp"
+                        app:drawableStartCompat="@drawable/ic_twitter"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_location"
+                        android:layout_width="match_parent"
+                        android:text="Loading..."
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:drawablePadding="8dp"
+                        app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_companion"
+                        android:layout_width="match_parent"
+                        android:text="Loading..."
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        app:drawableStartCompat="@drawable/ic_baseline_apartment_24"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_followers"
+                        android:layout_width="match_parent"
+                        android:text="... Followers | ... Following"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:drawablePadding="8dp"
+                        app:drawableStartCompat="@drawable/ic_baseline_group_24"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:text="Repositories"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:text="Starred"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

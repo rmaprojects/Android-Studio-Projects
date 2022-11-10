@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_repo_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_public_24" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_repo_name"
+                android:layout_width="match_parent"
+                android:text="mojombo.github.io"
+                android:layout_margin="12dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:padding="4dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_language"
+                    android:layout_width="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    tools:text="Kotlin"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_stargazer"
+                    android:layout_width="wrap_content"
+                    tools:text="21"
+                    app:drawableTint="@color/rateColor"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    android:gravity="center_vertical"
+                    app:drawableStartCompat="@drawable/ic_round_star_rate_24"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
