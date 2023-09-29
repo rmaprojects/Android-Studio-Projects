@@ -1,6 +1,7 @@
 package com.rmaprojects.submission1.pages.auth
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -11,13 +12,21 @@ import com.google.android.material.snackbar.Snackbar
 import com.rmaprojects.submission1.R
 import com.rmaprojects.submission1.data.ViewModelFactory
 import com.rmaprojects.submission1.databinding.FragmentLoginBinding
-import com.rmaprojects.submission1.showSnackbar
+import com.rmaprojects.submission1.utils.showSnackbar
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private val binding: FragmentLoginBinding by viewBinding()
     private val viewModel: AuthViewModel by viewModels {
         ViewModelFactory.getInstance()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val inflater = TransitionInflater.from(requireContext())
+        exitTransition = inflater.inflateTransition(android.R.transition.explode)
+        reenterTransition = inflater.inflateTransition(android.R.transition.explode)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

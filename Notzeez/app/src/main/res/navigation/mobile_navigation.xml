@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        tools:layout="@layout/fragment_dashboard"
+        android:name="com.rmaproject.notzeez.pages.dashboard.DashboardFragment"
+        android:label="" >
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/mobile_navigation"
+            android:id="@+id/action_nav_dashboard_to_nav_login"
+            app:destination="@id/nav_login" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_add_notes"
+            app:destination="@id/nav_add_notes" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_search"
+            app:destination="@id/nav_search" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.rmaproject.notzeez.pages.auth.LoginFragment"
+        android:label="Masuk"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_register"
+            app:destination="@id/nav_register" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.rmaproject.notzeez.pages.auth.RegisterFragment"
+        android:label="Daftar"
+        tools:layout="@layout/fragment_register"/>
+    <fragment
+        android:id="@+id/nav_add_notes"
+        android:name="com.rmaproject.notzeez.pages.addnote.AddNoteFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_note"/>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.rmaproject.notzeez.pages.search.SearchNoteFragment"
+        tools:layout="@layout/fragment_search_notes"
+        android:label="Cari Catatan" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.rmaproject.notzeez.pages.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_login"
+            app:destination="@id/nav_login"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/mobile_navigation"/>
+        <action
+            android:id="@+id/action_nav_profile_to_nav_favorite"
+            app:destination="@id/nav_favorite" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorite"
+        tools:layout="@layout/fragment_favorite"
+        android:name="com.rmaproject.notzeez.pages.favourites.FavouriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_nav_favorite_to_nav_add_notes"
+            app:destination="@id/nav_add_notes" />
+    </fragment>
+</navigation>

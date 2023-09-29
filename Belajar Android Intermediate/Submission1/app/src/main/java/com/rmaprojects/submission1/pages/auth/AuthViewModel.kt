@@ -38,7 +38,7 @@ class AuthViewModel(private val repository: StoriesRepository) : ViewModel() {
             } catch (e: Exception) {
                 _isLoginLoading.postValue(null)
                 _isLoginSuccess.postValue(false)
-                Log.d("ERROR", e.toString())
+                Log.d("LOGIN ERROR", e.toString())
             }
         }
     }

@@ -24,9 +24,7 @@
         android:id="@+id/materialTextView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_margin="16dp"
         android:gravity="center"
         android:text="Masukkan nama anda, email, dan password yang akan anda gunakan"
         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
@@ -72,8 +70,8 @@
             android:hint="@string/hint_email" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordInputLayout"
+    <com.rmaprojects.submission1.cutomview.MyEditText
+        android:id="@+id/ed_register_password"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,17 +79,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         app:endIconMode="password_toggle"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/emailInputLayout"
         app:layout_constraintStart_toStartOf="@+id/emailInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_register_password"
-            android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_new_password" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_register"
@@ -103,7 +94,7 @@
         android:text="Register"
         app:layout_constraintEnd_toEndOf="@+id/materialTextView4"
         app:layout_constraintStart_toStartOf="@+id/materialTextView4"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_register_password" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/progress_circular"

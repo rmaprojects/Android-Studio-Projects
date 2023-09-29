@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_search"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            style="@style/Widget.Material3.CardView.Filled"
+            app:cardCornerRadius="32dp"
+            android:layout_height="56dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="?colorOnSurfaceVariant"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    android:text="@string/placeholder_search_note"
+                    android:drawablePadding="8dp"
+                    app:drawableStartCompat="@drawable/ic_baseline_search_24"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="32dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/desc_your_account"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notes_rv"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_note_list"
+        tools:listitem="@layout/item_notes"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_no_notes"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:text="@string/msg_no_notes"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/notes_rv"
+        android:visibility="gone"
+        app:layout_anchorGravity="center"
+        android:indeterminate="true"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_notes"
+        android:layout_width="wrap_content"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_anchor="@id/notes_rv"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc_add_note" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

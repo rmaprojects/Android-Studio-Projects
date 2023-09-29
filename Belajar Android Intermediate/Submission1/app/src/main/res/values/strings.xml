@@ -1,12 +1,23 @@
 <resources>
-    <string name="app_name">Submission1</string>
+    <string name="app_name">StoryApp</string>
     <string name="hint_email">Email</string>
     <string name="hint_name">Name</string>
     <string name="hint_new_password">New Password</string>
     <string name="hint_password_login">Password</string>
-    <string name="alert_login_fail">Terjadi kesalahan, gagal login!</string>
+    <string name="alert_login_fail">Terjadi kesalahan, mungkin password yang anda masukkan salah.</string>
     <string name="alert_story_failed">Terjadi kesalahan, list story gagal ditampilkan!</string>
     <string name="alert_register_fail">Terjadi kesalahan, gagal mendaftarkan user!</string>
     <string name="alert_register_success">Registrasi berhasil! Silahkan login untuk melanjutkan</string>
     <string name="err_field_empty">Please fill this field</string>
+    <string name="fail_load_detail">Detail Story gagal ditampilkan!</string>
+    <string name="command_add_from_gallery">+\nTambahkan gambar dari galeri anda</string>
+    <string name="hint_add_desc">Tambahkan deskripsi</string>
+    <string name="fail_upload_img">Gagal upload gambar!</string>
+    <string name="success_img_upload">Gambar berhasil diupload!</string>
+    <string name="warn_logout">Yakin ingin log out?</string>
+    <string name="txt_cancel">Batal</string>
+    <string name="warn_txt_minimum">Teks harus minimal 8 karakter</string>
+    <string name="add_story">Add Story</string>
+    <string name="txt_story_locations">Story locations</string>
+    <string name="err_no_internet">Gagal memuat list cerita, mohon periksa internet anda</string>
 </resources>

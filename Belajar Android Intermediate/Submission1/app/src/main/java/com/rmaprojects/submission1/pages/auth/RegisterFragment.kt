@@ -1,6 +1,7 @@
 package com.rmaprojects.submission1.pages.auth
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -11,7 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.rmaprojects.submission1.R
 import com.rmaprojects.submission1.data.ViewModelFactory
 import com.rmaprojects.submission1.databinding.FragmentRegisterBinding
-import com.rmaprojects.submission1.showSnackbar
+import com.rmaprojects.submission1.utils.showSnackbar
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
 
@@ -20,12 +21,20 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         ViewModelFactory.getInstance()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val inflater = TransitionInflater.from(requireContext())
+        exitTransition = inflater.inflateTransition(android.R.transition.explode)
+        reenterTransition = inflater.inflateTransition(android.R.transition.explode)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnRegister.setOnClickListener {
             val name = binding.edRegisterName.text.toString()
             val email = binding.edRegisterEmail.text.toString()
-            val password = binding.edRegisterPassword.text.toString()
+            val password = binding.edRegisterPassword.editText?.text.toString()
 
             if (name.isEmpty()) {
                 binding.nameInputLayout.error = getString(R.string.err_field_empty)
@@ -34,11 +43,6 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
             if (email.isEmpty()) {
                 binding.emailInputLayout.error = getString(R.string.err_field_empty)
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty()) {
-                binding.passwordInputLayout.error = getString(R.string.err_field_empty)
                 return@setOnClickListener
             }
 

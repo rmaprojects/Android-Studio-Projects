@@ -10,25 +10,23 @@ import com.rmaprojects.submission1.R
 import com.rmaprojects.submission1.data.api.model.stories.Story
 import com.rmaprojects.submission1.databinding.ItemStoryBinding
 import com.rmaprojects.submission1.pages.storylist.StoriesAdapter.StoriesViewHolder
-import java.text.SimpleDateFormat
-import java.util.Locale
 
-class StoriesAdapter(private val storyList : List<Story?>) : RecyclerView.Adapter<StoriesViewHolder>() {
+class StoriesAdapter(
+    private val listStory: List<Story>
+) : RecyclerView.Adapter<StoriesViewHolder>() {
 
-    var onClickListener: ((Story?) -> Unit)?= null
+    var onClickListener: ((Story) -> Unit)?= null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         StoriesViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_story, parent, false))
 
     override fun onBindViewHolder(holder: StoriesViewHolder, position: Int) {
-        val story = storyList[position]
+        val story = listStory[position]
         holder.bindView(story)
         holder.binding.root.setOnClickListener {
             onClickListener?.invoke(story)
         }
     }
-
-    override fun getItemCount() = storyList.size
 
     class StoriesViewHolder(view:View) : RecyclerView.ViewHolder(view) {
 
@@ -36,19 +34,13 @@ class StoriesAdapter(private val storyList : List<Story?>) : RecyclerView.Adapte
 
         fun bindView(story: Story?) = with(binding) {
             story?.let {
-                txtAuthor.text = it.name
-                txtDescription.text = it.description
-                imgStory.load(it.photoUrl)
-                txtDate.text = it.createdAt!!.formatDate()
+                tvDetailName.text = it.name
+                tvDetailDescription.text = it.description
+                ivItemPhoto.load(it.photoUrl)
+                txtDate.text = it.createdAt
             }
         }
-
-        private fun String.formatDate() : String {
-            val simpleDateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm",Locale.getDefault())
-            return SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.getDefault()).format(simpleDateFormat.parse(this)!!)
-        }
-
-
-
     }
+
+    override fun getItemCount(): Int = listStory.size
 }

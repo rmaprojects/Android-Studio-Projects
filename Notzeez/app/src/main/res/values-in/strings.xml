@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notzeez</string>
+    <string name="msg_success_login">Berhasil Login!</string>
+    <string name="msg_err_mail_empty">Email wajib diisi</string>
+    <string name="msg_err_pw_empty">Password wajib diisi</string>
+    <string name="msg_status_save_note">Menyimpan catatan…</string>
+    <string name="msg_err_save_note">Gagal menyimpan catatan!</string>
+    <string name="msg_success_save_note">Berhasil menyimpan catatan!</string>
+    <string name="msg_success_register">Berhasil daftar akun!</string>
+    <string name="msg_back_to_login">Kembali ke login</string>
+    <string name="msg_warn_delete_note">Hapus catatan</string>
+    <string name="msg_warn_message_delete_note">Yakin ingin menghapus Catatan?</string>
+    <string name="decision_yes">Ya</string>
+    <string name="decision_no">Tidak</string>
+    <string name="msg_success_delete_note">Berhasil menghapus catatan!</string>
+    <string name="msg_no_title">Tanpa Judul</string>
+    <string name="msg_warn_sign_out">Keluar</string>
+    <string name="msg_warn_message_sign_out">Yakin ingin keluar?</string>
+    <string name="placeholder_add_title">Tambahkan Judul</string>
+    <string name="placeholder_add_note">Tambahkan catatan</string>
+    <string name="placeholder_search_note">Cari Catatan…</string>
+    <string name="desc_your_account">Your Account</string>
+    <string name="desc_note_list">Notes List</string>
+    <string name="msg_no_notes">Tidak ada catatan, coba buat dulu</string>
+    <string name="desc_add_note">Add Notes</string>
+    <string name="msg_sign_in">Masuk</string>
+    <string name="msg_register">Daftar</string>
+    <string name="msg_no_search">Hasil pencarian akan tampil disini</string>
+    <string name="msg_success_log_out">Anda berhasil Log out, silahkan login kembali!</string>
+    <string name="msg_failed_upload_img">Gagal mengupload Gambar</string>
+    <string name="msg_save_image">Menyimpan gambar…</string>
+    <string name="msg_success_change_profile">Berhasil mengubah Foto Profil!</string>
+    <string name="msg_upload_image">Mengupload gambar…</string>
+</resources>

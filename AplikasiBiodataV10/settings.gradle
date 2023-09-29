@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Aplikasi Biodata V.1.0"

@@ -12,7 +12,7 @@
         android:layout_height="300dp">
 
         <ImageView
-            android:id="@+id/img_story"
+            android:id="@+id/iv_item_photo"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="164dp"
@@ -24,7 +24,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_author"
+                android:id="@+id/tv_detail_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -36,11 +36,11 @@
                 tools:text="Makan pagi" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_description"
+                android:id="@+id/tv_detail_description"
                 android:layout_width="match_parent"
                 android:maxLines="3"
                 tools:text="makan pagi bla bla bla"
-                android:layout_below="@id/txt_author"
+                android:layout_below="@id/tv_detail_name"
                 android:layout_height="wrap_content"/>
 
             <com.google.android.material.textview.MaterialTextView

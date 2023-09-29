@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Aplikasi Berita External 20.1"

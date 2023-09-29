@@ -1,3 +1,0 @@
-package com.rmaprojects.signupsigninsupabase.model.returnmodel.signup
-
-class UserMetadata

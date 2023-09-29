@@ -1,11 +1,13 @@
 package com.rmaprojects.submission1.data.repository
 
 import com.rmaprojects.submission1.data.api.`interface`.ApiInterface
+import com.rmaprojects.submission1.data.api.model.detail.StoryDetailResponse
 import com.rmaprojects.submission1.data.api.model.login.LoginResponse
 import com.rmaprojects.submission1.data.api.model.register.RegisterResponse
 import com.rmaprojects.submission1.data.api.model.stories.StoriesResponse
-import retrofit2.http.GET
-import retrofit2.http.Header
+import com.rmaprojects.submission1.data.api.model.upload.UploadResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 
 class StoriesRepository(
     private val api: ApiInterface
@@ -20,9 +22,16 @@ class StoriesRepository(
     suspend fun loginUser(
         email: String,
         password: String
-    ) : LoginResponse = api.loginUser(email, password)
+    ): LoginResponse = api.loginUser(email, password)
 
-    suspend fun getStories(
-        value: String
-    ): StoriesResponse = api.getStories(value)
+    suspend fun getStories(): StoriesResponse = api.getStories()
+
+    suspend fun getDetailStory(
+        id: String
+    ): StoryDetailResponse = api.getDetailStory(id)
+
+    suspend fun uploadStories(
+        description: RequestBody,
+        photo: MultipartBody.Part?,
+    ): UploadResponse = api.uploadStories(description, photo)
 }

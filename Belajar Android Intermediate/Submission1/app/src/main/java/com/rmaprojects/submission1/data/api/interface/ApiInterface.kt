@@ -1,9 +1,12 @@
 package com.rmaprojects.submission1.data.api.`interface`
 
+import com.rmaprojects.submission1.data.api.model.detail.StoryDetailResponse
 import com.rmaprojects.submission1.data.api.model.login.LoginResponse
 import com.rmaprojects.submission1.data.api.model.register.RegisterResponse
 import com.rmaprojects.submission1.data.api.model.stories.StoriesResponse
 import com.rmaprojects.submission1.data.api.model.upload.UploadResponse
+import com.rmaprojects.submission1.utils.getToken
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,6 +18,7 @@ import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiInterface {
 
@@ -35,21 +39,21 @@ interface ApiInterface {
 
     @GET("stories")
     suspend fun getStories(
-        @Header("Authorization") value: String
+        @Header("Authorization") value: String = getToken()
     ): StoriesResponse
 
     @GET("stories/{id}")
     suspend fun getDetailStory(
-        @Header("Authorization") value: String,
-        @Path("id") id : String
-    )
+        @Path("id") id : String,
+        @Header("Authorization") value: String = getToken(),
+    ) : StoryDetailResponse
 
     @Multipart
     @POST("stories")
     suspend fun uploadStories(
-        @Header("Authorization") value: String,
         @Part("description") description: RequestBody,
-        @Part("photo") photo: RequestBody
+        @Part photo: MultipartBody.Part?,
+        @Header("Authorization") value: String = getToken()
     ) : UploadResponse
 
     companion object {

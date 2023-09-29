@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:id="@+id/profile_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            app:strokeColor="?colorOnSurfaceVariant"
+            app:strokeWidth="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Your Account"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            app:indicatorSize="200dp"
+            android:layout_height="200dp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_container"
+        tools:text="Username" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_all_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?colorTertiary"
+        android:text="My Saved Notes"
+        android:layout_margin="32dp"
+        app:icon="@drawable/ic_baseline_save_24"
+        app:layout_constraintEnd_toEndOf="@+id/txt_username"
+        app:layout_constraintStart_toStartOf="@+id/txt_username"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="?colorError"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="@+id/btn_all_favorite"
+        app:layout_constraintStart_toStartOf="@+id/btn_all_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/btn_all_favorite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
